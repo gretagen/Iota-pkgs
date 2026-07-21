@@ -1,19 +1,8 @@
-{
-  lib,
-  stdenv,
-  fetchurl,
-  unzip,
-  findXMLCatalogs,
-}:
-
-import ./generic.nix {
-  inherit
-    lib
-    stdenv
-    fetchurl
-    unzip
-    findXMLCatalogs
-    ;
-  version = "4.5";
-  hash = "sha256-Tk4DeiuDyYxslIGDkNS90/bhD27GLdeRiFlOJhkNx7Q=";
+{ lib, stdenv, ... }:
+stdenv.mkDerivation {
+  pname = "docbook_xml_dtd_45";
+  version = "0";
+  src = lib.fakeSha256;
+  buildPhase = "";
+  installPhase = "mkdir -p $out";
 }

@@ -1,6 +1,8 @@
-{ lib, stdenv }:
+{ lib, stdenv, ... }:
 stdenv.mkDerivation {
   pname = "libtool";
   version = "0";
-  installPhase = "true";
+  src = lib.fakeSha256;
+  buildPhase = "";
+  installPhase = "mkdir -p $out";
 }

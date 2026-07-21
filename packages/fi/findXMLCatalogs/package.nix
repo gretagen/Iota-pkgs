@@ -1,6 +1,6 @@
 { lib, stdenv, ... }:
 stdenv.mkDerivation {
-  pname = "docbook_xsl";
+  pname = "findXMLCatalogs";
   version = "0";
   src = lib.fakeSha256;
   buildPhase = "";
